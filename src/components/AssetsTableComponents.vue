@@ -83,7 +83,7 @@ export default {
   computed: {
     filteredAssets() {
       const altOrder = this.sortOrder === 1 ? -1 : 1;
-      const regexp = new RegExp(this.filter.trim(), 'ig');     
+      const regexp = new RegExp(this.filter.trim(), 'ig');
       return this.assets
         .filter(x => regexp.test(x.name) || regexp.test(x.symbol))
         .sort((a, b) => {
